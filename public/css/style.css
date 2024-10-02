@@ -1,0 +1,187 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    flex: 1;
+}
+.navbar{
+    height: 5rem;
+    background-color: rgb(138, 174, 174);
+}
+.fa-truck-fast{
+    color: black;
+    font-size: 2rem;
+    padding: 2px;
+}
+
+.nav-link{
+    color: #191717 !important;
+}
+.nav{
+  font-size: 2rem !important;
+}
+/* Footer */
+.f-info-links a{
+    text-decoration: none;
+    color: #353434ca;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info-links{
+    width: 100%;
+}
+
+.f-info-social{
+    width: 100%;
+    font-size: 1.3rem;
+}
+
+.f-info-social i{
+    margin-right: 0.3rem;
+}
+
+.f-info{
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-evenly;
+    justify-content: center;
+}
+/* Card */
+.card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+    border-radius: 1.1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    border:1px solid rgba(15, 15, 15, 0.431);
+}
+
+.card-body{
+    padding: 0 !important;
+}
+
+.card-weight{
+    font-weight: 200px;
+}
+
+ /* Card effect  */
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.3;
+    background-color: black;
+}
+
+/* edit btn */
+.edit-btn{
+    background-color: rgb(244, 3, 3) !important;
+    border: none !important;
+}
+
+/* Show img */
+.show-img{
+    height: 30vh;
+}
+.btns{
+    display: flex;
+}
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* About us */
+.website-link {
+    color: #ff5a5f; /* Airbnb-like red color */
+    text-decoration: none;
+  }
+  
+  .website-link:hover {
+    text-decoration: underline;
+    color: #ff7f7f; /* A lighter hover effect */
+  }
+  
+.about-hero {
+    background: url('images.jpg') no-repeat center center/cover;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+  }
+  
+  .about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .about-hero h1 {
+    font-size: 48px;
+    margin: 0;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .about-hero p {
+    font-size: 24px;
+    margin-top: 10px;
+    z-index: 2;
+    position: relative;
+  }
+  
+  /* About Content */
+  .about-content {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .about-content h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .about-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #594f4f;
+  }
+  
+  .about-content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .about-content li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: rgb(80, 58, 58);
+  }
+  
+  .about-content li::before {
+    content: '✔️';
+    margin-right: 12px;
+  }
+  
+  .about-content p, ul {
+    max-width: 800px;
+    margin: 0 auto;
+  }
