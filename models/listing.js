@@ -1,9 +1,8 @@
 //joi to validate our schema(server side)
-const { text } = require("express");
 const mongoose = require("mongoose");
-const review = require("./review");
-const { ref } = require("joi");
+const Review = require("./review");
 const Schema = mongoose.Schema;
+
 const listingSchema = new Schema({
   title: {
     type: String,
@@ -39,11 +38,17 @@ const listingSchema = new Schema({
   },
   reviews:[
     {
-      type:Schema.Types.ObjectId,
+      type: Schema.Types.ObjectId,
       ref:"Review",
     },
   ],
 });
+
+listingSchema.post("findOneAndDelete",async(listing)=>{
+  if(listing){
+    await Review.deleteMany({reviews: {$in: listing.reviews}});
+  }
+})
 
 const Listing = mongoose.model("Listing", listingSchema);
 module.exports = Listing;

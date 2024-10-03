@@ -59,5 +59,25 @@
       </div>
       <button class="btn btn-outline-dark">Submit</button>
     </form>
+    <hr>
+    <p><b>All Reviews</b></p>
+    <div class="row">
+      <% for(review of listing.reviews){%>
+        <div class="card col-5 mb-3 ms-3">
+          <div class="card-body">
+            <h5 class="card-title">Card Title</h5>
+            <p class="card-text"><%= review.comment %></p>
+            <p class="card-text"><%= review.rating %> stars</p>
+          </div>
+          <form 
+            class="mb-3" 
+            method="POST" 
+            action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE"
+          >
+            <button class="btn btn-sm btn-dark">Delete</button>
+          </form>
+        </div>
+      <% } %>
+    </div>
   </div>
 </div>
