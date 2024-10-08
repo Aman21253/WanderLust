@@ -8,16 +8,19 @@ body{
 }
 .navbar{
     height: 5rem;
-    background-color: rgb(138, 174, 174);
+    background-color: rgb(181, 215, 215);
+    font-size: 1rem !important;
+    /* background-color: white; */
 }
-.fa-truck-fast{
-    color: black;
+.fa-compass{
+    color: red;
     font-size: 2rem;
     padding: 2px;
 }
 
 .nav-link{
     color: #191717 !important;
+    font-size: 1.2rem !important;
 }
 .nav{
   font-size: 2rem !important;
