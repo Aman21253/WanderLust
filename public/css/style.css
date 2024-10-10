@@ -12,7 +12,7 @@ body{
     font-size: 1rem !important;
     /* background-color: white; */
 }
-.fa-compass{
+.fa-font-awesome{
     color: red;
     font-size: 2rem;
     padding: 2px;
@@ -90,6 +90,10 @@ body{
 .edit-btn{
     background-color: rgb(244, 3, 3) !important;
     border: none !important;
+}
+
+.add-btn{
+  background-color: rgb(244, 3, 3) !important;
 }
 
 /* Show img */

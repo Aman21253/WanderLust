@@ -1,2 +1,2 @@
-# WanderLust
+# wanderlust
     init
