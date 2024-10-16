@@ -3,17 +3,21 @@ const router= express.Router();
 const wrapAsync = require("../utils/wrapAsync");
 const {isLoggedIn, isOwner, validateListing}=require("../middleware.js");
 
+//Multer and cloudinary is used for file and storing resp.
+//npm i cloudinary multer-storage-cloudinary
 const listingControllers=require("../controllers/listings.js");
-const multer  = require('multer')
-const upload = multer({ dest: 'uploads/' });
+const {storage}=require("../cloudConfig.js");
+const multer  = require('multer');
+const upload = multer({ storage });
 
 router
     .route("/")
     .get(wrapAsync(listingControllers.index)) //Index Route
-    //.post(isLoggedIn, validateListing, wrapAsync(listingControllers.createForm)); //Create Route
-    .post(upload.single('listing[image]'),(req,res)=>{
-        res.send(req.file);
-    })
+    .post(
+        isLoggedIn, 
+        upload.single("listing[image]"),
+        validateListing, 
+        wrapAsync(listingControllers.createForm)); //Create Route
 
 //New Route
 router.get("/new",isLoggedIn, listingControllers.newForm);
@@ -23,6 +27,7 @@ router.route("/:id")
 .put(
     isLoggedIn,
     isOwner,
+    upload.single("listing[image]"),
     validateListing,
     wrapAsync(listingControllers.updateForm)
 )

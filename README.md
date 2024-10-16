@@ -1,2 +1,2 @@
-# wanderlust
+# GlobeFlicker
     init

@@ -14,7 +14,7 @@ module.exports.postSignup=(async (req,res)=>{
         if(err){
             return next(err);
         }
-        req.flash("success","Welecome to Journlease");
+        req.flash("success","Welecome to GlobeFlicker");
         res.redirect("/listings");
     });
     }catch(e){
@@ -28,7 +28,7 @@ module.exports.renderLoginForm=(req,res)=>{
 }
 
 module.exports.login=async(req,res)=>{
-    req.flash("success","Welcome back to wanderlust");
+    req.flash("success","Welcome back to GlobeFlicker");
     let redirectUrl=res.locals.redirectUrl || "/listings";
     res.redirect(redirectUrl);
 };

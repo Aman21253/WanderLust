@@ -1,18 +1,24 @@
 
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
     <div class="container-fluid">
-      <a class="nav-link nav" href="/listings"><b>Wanderlust</b></a>
       <a class="navbar-brand" href="/listings"><i class="fa-solid fa-font-awesome"></i></a>
+      <a class="nav-link nav" href="/listings"><b>GlobeFlicker</b></a>
+
       <button class="navbar-toggler"
         type="button" 
         data-bs-toggle="collapse" 
         data-bs-target="#navbarNavAltMarkup">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ms-auto">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2 search-inp" type="search" placeholder="Search destination">
+            <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
         </div>
-        <div class="navbar-nav ">
+        <div class="navbar-nav ms-auto ">
           <a class="nav-link" href="/listings/new">Add new listing</a>
           <a class="nav-link" href="/about">About us</a>
           <% if(!currUser){ %>
@@ -22,9 +28,7 @@
           <% if(currUser){ %>
             <a class="nav-link" href="/logout"><b>Logout</b></a>
           <% }%>
-        
         </div>
-      
       </div>
     </div>
   </nav>

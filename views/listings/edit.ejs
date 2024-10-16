@@ -2,7 +2,14 @@
 <div class="row mt-3">
   <div class="col-8 offset-2">
     <h3>Edit your Listing</h3>
-    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" class="needs-validation" novalidate>
+    <form 
+      method="POST" 
+      action="/listings/<%= 
+      listing._id %>?_method=PUT" 
+      class="needs-validation" 
+      novalidate
+      enctype="multipart/form-data"
+    >
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
         <input name="listing[title]" 
@@ -23,13 +30,15 @@
         </textarea>
       </div>
       <div class="mb-3">
-        <label for="image" class="form-label">Image</label>
+        <p>Original listing image</p>
+        <img src="<%= newImage %>">
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Upload Image</label>
         <input 
-          name="listing[image]" 
-          value="<%= listing.image %>" 
-          type="text" 
+          name="listing[image]"
+          type="file" 
           class="form-control"
-          required
         />
       </div>
       <div class="row">
@@ -38,7 +47,7 @@
           <input
            name="listing[price]" 
            value="<%= listing.price %>" 
-           type="number" 
+           type="number"
            class="form-control"
            required
           />
@@ -66,6 +75,21 @@
          required
         />
         <div class="invalid-feedback">Please enter city</div>
+      </div>
+      <div class=".mb-3">
+        <label for="category">Choose a Category:</label>
+        <select name="category" id="category">
+          <option value="Desert">Desert</option>
+          <option value="Rooms">Rooms</option>
+          <option value="Hotel">Hotel</option>
+          <option value="View">View</option>
+          <option value="Camping">Camping</option>
+          <option value="Top-cities">Top-cities</option>
+          <option value="Arctic">Arctic</option>
+          <option value="Play">Play</option>
+          <option value="Ski-in/out">Ski-in/out</option>
+          <option value="Iconic-city">Iconic-city</option>
+        </select>
       </div>
      
       <button class="btn edit-btn mt-3">Edit</button>
