@@ -68,6 +68,10 @@ module.exports.updateForm= async (req, res) => {
   res.redirect(`/listings/${id}`);
 };
 
+// module.exports.search= async(req,res)=>{
+//   let {id}=req.params;
+// }
+
 module.exports.deleteForm= async (req, res) => {
     let { id } = req.params;
     let deletedListing = await Listing.findByIdAndDelete(id);
