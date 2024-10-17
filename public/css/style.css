@@ -100,7 +100,7 @@ body{
 }
 .card-img-overlay:hover{
     opacity: 0.3;
-    background-color: black;
+    background-color: rgb(231, 227, 227);
 }
 
 /* edit btn */
@@ -236,10 +236,10 @@ body{
   border: 1.3px solid;
   border-radius: 1.2rem;
   height: 3rem;
-  width: 9rem;
+  width: 11rem;
   margin-top: 1rem;
   margin-left: 56rem; 
-  padding: 1rem;
+  padding: 0.7rem 0rem 1rem 1.5rem  ;
   display: flex;
   align-items:center;
 }
